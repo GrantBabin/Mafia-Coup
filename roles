@@ -4,5 +4,7 @@ Possible roles for the Mafia bot:
   2. Mafia (dark red): This role will be more specific depending on the mafia member, but in general, mafia will get their own text channel
     during the night to converse with one another.
   3. Town (light green): the text of this role will change depending on the specific role of the person (i.e. Medium).
-  4. 
+  4. Graveyard (grey): this role will be given to people that have died in the game. They will be able to view the In-Game text channel,
+    but will not be able to type in it. During the night, the medium is able to view and converse with dead people. People with the
+    Graveyard role will also be able to view all of the channels that pop up during the night.
   
