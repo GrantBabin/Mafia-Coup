@@ -1,0 +1,8 @@
+Possible roles for the Mafia bot:
+  1. In-Game (orange): during the day time, all users will only be able to view this text channel. During the night, this role is removed to
+    prevent users from seeing other users' roles.
+  2. Mafia (dark red): This role will be more specific depending on the mafia member, but in general, mafia will get their own text channel
+    during the night to converse with one another.
+  3. Town (light green): the text of this role will change depending on the specific role of the person (i.e. Medium).
+  4. 
+  
