@@ -1,12 +1,14 @@
 import Command from "./command";
 
 class Ping extends Command {
-  constructor() {
-    this.prefix = "ping";
+  constructor(bot, prefix) {
+    this.cmd = "ping";
+
+    super(bot, prefix);
   }
 
   process(message) {
-    return "Pyonyang!";
+    message.reply("pyonyang");
   }
 }
 

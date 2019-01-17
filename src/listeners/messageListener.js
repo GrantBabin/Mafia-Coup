@@ -1,6 +1,6 @@
 class MessageListener {
   constructor(bot) {
-    client.on("message" async(message) => {
+    bot.client.on("message" async(message) => {
       if(message.author.bot) return;
       if(message.content.indexOf(bot.commandPrefix) !== 0) return;
 
@@ -8,9 +8,8 @@ class MessageListener {
         if(!cmd.isValid(message)) return;
       
         try {
-          const res = cmd.process(message);
-
-          message.respond(res);
+          cmd.process(message);
+        
         } catch(e) {
           console.log(e);
         }

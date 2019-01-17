@@ -3,7 +3,7 @@ class Bot {
     this.client = client;
     this.config = config;
 
-    this.commandPrefix = this.commandPrefix;
+    this.commandPrefix = this.config.commandPrefix;
 
     loadCommands();
     loadListenerS();
@@ -11,10 +11,22 @@ class Bot {
 
   loadCommands() {
     this.commands = [];
+
+    for (const cmdName of this.config.botCommands) {
+      const command = require(`./commands/${cmdName}`);
+      
+      this.commands.push(new Command(this, this.commandPrefix));
+    }
   }
 
   loadListeners() {
     this.listeners = [];
+
+    for (const listenerName of this.config.botListeners) {
+      const listener = require(`./listeners/${listenerName}`);
+      
+      this.listeners.push(new listener());
+    }
   }
 }
 

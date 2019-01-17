@@ -1,3 +1,5 @@
 {
-  
+  "commandPrefix": "::",
+  "botCommands": ["ping"],
+  "botListeners": ["messageListener"]
 }
